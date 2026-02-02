@@ -1,3 +1,5 @@
+import getAssetPath from '../../utils/assetPath';
+
 export const TAB_ITEMS = [
   { state: 'Inactive', type: 'Primary', label: 'Monthly' },
   { state: 'Inactive', type: 'Primary', label: '6-Month Plan' },
@@ -139,9 +141,9 @@ export const AVATAR_ITEMS: AvatarItem[] = [
 ];
 
 export const BLOG_ITEMS = [
-  { frameDivBackgroundImage: "url('/Frame-2087327364@3x.png')" },
-  { frameDivBackgroundImage: "url('/Frame-20873273641@3x.png')" },
-  { frameDivBackgroundImage: "url('/Frame-20873273641@3x.png')" },
+  { frameDivBackgroundImage: `url('${getAssetPath('/Frame-2087327364@3x.png')}')` },
+  { frameDivBackgroundImage: `url('${getAssetPath('/Frame-20873273641@3x.png')}')` },
+  { frameDivBackgroundImage: `url('${getAssetPath('/Frame-20873273641@3x.png')}')` },
 ] as const;
 
 export const TARGET_AUDIENCE_LIST = [
@@ -157,19 +159,19 @@ export const TESTIMONIAL_ITEMS = [
     quote: '"Dyna is like a companion who always reminds me and helps me not to miss deadlines. It really helps me focus more and feel less lonely when working alone."',
     name: 'Markus Freeman',
     role: 'Dev Ops - Azious',
-    frameIcon: '/Frame.svg',
+    frameIcon: getAssetPath('/Frame.svg'),
   },
   {
     quote: '"Dyna is like a companion who always reminds me and helps me not to miss deadlines. It really helps me focus more and feel less lonely when working alone."',
     name: 'Markus Freeman',
     role: 'Dev Ops - Azious',
-    frameIcon: '/Frame1.svg',
+    frameIcon: getAssetPath('/Frame1.svg'),
   },
   {
     quote: '"The weekly reports and AI assistant save me hours every week. I finally have a clear view of my business."',
     name: 'Sophie Martin',
     role: 'Freelance Designer',
-    frameIcon: '/Frame.svg',
+    frameIcon: getAssetPath('/Frame.svg'),
   },
 ] as const;
 
