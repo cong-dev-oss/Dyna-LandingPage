@@ -889,7 +889,15 @@ export default function DYNALANDINGPAGE() {
         <div className="frame"><Logo property1="Default" union="/Union1.svg" group="/Group1.svg" />
         </div>
         <div className="menu">
-          <div className="inner">
+          <motion.div 
+            className="inner"
+            whileHover={{ 
+              backgroundColor: "rgba(59, 130, 246, 1)",
+              color: "#ffffff",
+              scale: 1.05
+            }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="icon-placeholder">
               <img className="elements-icon" alt="" src={getAssetPath("/elements.svg")} />
             </div>
@@ -897,8 +905,16 @@ export default function DYNALANDINGPAGE() {
             <div className="icon-placeholder">
               <img className="elements-icon2" alt="" src={getAssetPath("/elements1.svg")} />
             </div>
-          </div>
-          <div className="inner">
+          </motion.div>
+          <motion.div 
+            className="inner"
+            whileHover={{ 
+              backgroundColor: "rgba(59, 130, 246, 1)",
+              color: "#ffffff",
+              scale: 1.05
+            }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="icon-placeholder">
               <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
@@ -906,8 +922,16 @@ export default function DYNALANDINGPAGE() {
             <div className="icon-placeholder">
               <img className="elements-icon2" alt="" src={getAssetPath("/elements1.svg")} />
             </div>
-          </div>
-          <div className="inner">
+          </motion.div>
+          <motion.div 
+            className="inner"
+            whileHover={{ 
+              backgroundColor: "rgba(59, 130, 246, 1)",
+              color: "#ffffff",
+              scale: 1.05
+            }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="icon-placeholder">
               <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
@@ -915,8 +939,16 @@ export default function DYNALANDINGPAGE() {
             <div className="icon-placeholder">
               <img className="elements-icon2" alt="" src={getAssetPath("/elements1.svg")} />
             </div>
-          </div>
-          <div className="inner">
+          </motion.div>
+          <motion.div 
+            className="inner"
+            whileHover={{ 
+              backgroundColor: "rgba(59, 130, 246, 1)",
+              color: "#ffffff",
+              scale: 1.05
+            }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="icon-placeholder">
               <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
@@ -924,20 +956,36 @@ export default function DYNALANDINGPAGE() {
             <div className="icon-placeholder">
               <img className="elements-icon2" alt="" src={getAssetPath("/elements1.svg")} />
             </div>
-          </div>
-          <div className="inner5">
+          </motion.div>
+          <motion.div 
+            className="inner5"
+            whileHover={{ 
+              backgroundColor: "rgba(59, 130, 246, 1)",
+              color: "#ffffff",
+              scale: 1.05
+            }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="icon-placeholder4">
               <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
             <div className="resources">Resources</div>
             <img className="lucidechevron-down-icon" loading="lazy" alt="" src={getAssetPath("/lucide-chevron-down.svg")} />
-          </div>
-          <div className="inner5">
+          </motion.div>
+          <motion.div 
+            className="inner5"
+            whileHover={{ 
+              backgroundColor: "rgba(59, 130, 246, 1)",
+              color: "#ffffff",
+              scale: 1.05
+            }}
+            transition={{ duration: 0.2 }}
+          >
             <div className="icon-placeholder4">
               <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
             <div className="resources">Blog</div>
-          </div>
+          </motion.div>
         </div>
         <div className="web-cta-wrapper"><WebCTA property1="Default" button="Contact Us" webCTAFlex="unset" />
         </div>

@@ -2500,6 +2500,8 @@ align-items: center;
 justify-content: center;
 padding: var(--Global-Spacing-Sp-16) var(--Global-Spacing-Sp-32);
 gap: var(--gap-6);
+cursor: pointer;
+transition: all 0.2s ease;
 }
 .elements-icon {
 position: absolute;
@@ -2545,6 +2547,8 @@ align-items: center;
 justify-content: center;
 padding: var(--Global-Spacing-Sp-16) var(--Global-Spacing-Sp-32);
 gap: var(--Global-Spacing-Sp-4);
+cursor: pointer;
+transition: all 0.2s ease;
 }
 .icon-placeholder4 {
 height: var(--height-20);
