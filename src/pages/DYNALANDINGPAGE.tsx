@@ -41,6 +41,7 @@ export default function DYNALANDINGPAGE() {
   const [headerScrolled, setHeaderScrolled] = useState(false);
   const [testimonialSlide, setTestimonialSlide] = useState(0);
   const [slideDirection, setSlideDirection] = useState<'next' | 'prev'>('next');
+  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setHeaderScrolled(window.scrollY > 24);
@@ -63,10 +64,23 @@ export default function DYNALANDINGPAGE() {
     setTestimonialSlide((p) => (p >= totalTestimonialSlides - 1 ? 0 : p + 1));
   };
 
+  // Auto-play carousel (pause when dragging)
   useEffect(() => {
+    if (isDragging) return;
     const id = setInterval(goTestimonialNext, 5000);
     return () => clearInterval(id);
-  }, []);
+  }, [isDragging]);
+
+  // Handle drag end to detect swipe
+  const handleDragEnd = (event: any, info: any) => {
+    setIsDragging(false);
+    const swipeThreshold = 50;
+    if (info.offset.x > swipeThreshold) {
+      goTestimonialPrev();
+    } else if (info.offset.x < -swipeThreshold) {
+      goTestimonialNext();
+    }
+  };
 
   const toggleFaq = (index: number) => {
     setOpenFaqSet((prev) => {
@@ -743,23 +757,33 @@ export default function DYNALANDINGPAGE() {
               className="testimonials-container"
               variants={slideInRight}
             >
-              <div className="testimonials testimonials-slider">
+              <div className="testimonials testimonials-slider" style={{ cursor: 'grab' }}>
                 <AnimatePresence mode="sync" initial={false} custom={slideDirection}>
                   <motion.div
                     key={testimonialSlide}
                     className="testimonials-slide"
                     custom={slideDirection}
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={0.3}
+                    onDragStart={() => setIsDragging(true)}
+                    onDragEnd={handleDragEnd}
                     initial={(dir) => ({ x: dir === 'next' ? '100%' : '-100%', opacity: 0.8 })}
                     animate={{ x: 0, opacity: 1 }}
                     exit={(dir) => ({ x: dir === 'next' ? '-100%' : '100%', opacity: 0.8 })}
-                    transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
+                    transition={{ 
+                      duration: 0.5, 
+                      ease: [0.32, 0.72, 0, 1],
+                      opacity: { duration: 0.3 }
+                    }}
+                    style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
                   >
                     {visibleTestimonialItems.map((item, idx) => (
                       <motion.div
                         key={`${testimonialSlide}-${idx}-${item.name}`}
                         className="testimonial-card"
-                        whileHover={{ scale: 1.03, y: -5 }}
-                        transition={{ duration: 0.2 }}
+                        whileTap={{ scale: 0.98 }}
+                        transition={{ duration: 0.15 }}
                       >
                         <img className="frame-icon" loading="lazy" alt="" src={item.frameIcon} />
                         <div className="testimonial-text">{item.quote}</div>

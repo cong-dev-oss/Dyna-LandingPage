@@ -2091,6 +2091,11 @@ overflow: hidden;
 position: relative;
 width: 100%;
 min-height: 360px;
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+touch-action: pan-y;
 }
 .testimonials-slider .testimonials-slide {
 position: absolute;
@@ -2112,6 +2117,7 @@ width: max-content;
 min-width: 100%;
 justify-content: flex-start;
 flex-wrap: nowrap;
+will-change: transform;
 }
 .testimonials-slider .testimonial-card:first-child {
 flex: 0 0 calc(100% - 96px);
@@ -2147,6 +2153,11 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: top;
 max-width: 100%;
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+transition: transform 0.15s ease;
 }
 .frame-icon {
 width: 55px;
@@ -2197,6 +2208,11 @@ gap: var(--Golbal-Spacing-Sp-32);
 opacity: 0.5;
 max-width: 100%;
 color: var(--color-gray-200);
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+transition: opacity 0.3s ease, transform 0.15s ease;
 }
 .testimonial-header2 {
 align-self: stretch;
@@ -2220,6 +2236,8 @@ height: var(--height-4);
 position: relative;
 border-radius: 999px;
 background-color: var(--foreground-brand-on-background);
+cursor: pointer;
+overflow: hidden;
 }
 .progress-bar-background {
 position: absolute;
@@ -2236,10 +2254,12 @@ position: absolute;
 top: 0px;
 left: 0px;
 border-radius: 999px;
-background-color: var(--color-blueviolet);
+background: linear-gradient(90deg, #0084ff, #0061ff);
 min-width: 0;
 height: var(--height-4);
 z-index: 1;
+box-shadow: 0 0 8px rgba(0, 132, 255, 0.3);
+transition: width 0.3s ease-in-out;
 }
 .technologyfaq {
 align-self: stretch;
