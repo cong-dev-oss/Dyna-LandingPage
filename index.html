@@ -5,6 +5,29 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DYNA - Landing Page</title>
+    <script>
+      // Fix asset paths for GitHub Pages deployment
+      (function() {
+        const baseUrl = document.querySelector('base')?.getAttribute('href') || '/';
+        const originalCreateElement = document.createElement;
+        
+        document.createElement = function(tagName) {
+          const element = originalCreateElement.call(document, tagName);
+          
+          if (tagName.toLowerCase() === 'img') {
+            const originalSetAttribute = element.setAttribute;
+            element.setAttribute = function(name, value) {
+              if (name === 'src' && typeof value === 'string' && value.startsWith('/') && !value.startsWith(baseUrl)) {
+                value = baseUrl + value.slice(1);
+              }
+              return originalSetAttribute.call(this, name, value);
+            };
+          }
+          
+          return element;
+        };
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
