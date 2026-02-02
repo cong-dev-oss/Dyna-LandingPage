@@ -1,5 +1,5 @@
 // @ts-nocheck - Single default export; TS falsely reports "multiple default exports" in large JSX files
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Bg from '../components/Bg';
 import WebCTA from '../components/WebCTA';
@@ -28,6 +28,7 @@ import {
   BLOG_ITEMS,
   TARGET_AUDIENCE_LIST,
   FAQ_ITEMS,
+  TESTIMONIAL_ITEMS,
 } from './landing';
 import './DYNALANDINGPAGE.css';
 
@@ -36,6 +37,35 @@ export default function DYNALANDINGPAGE() {
   const [avatarItems] = useState(AVATAR_ITEMS);
   const [blogItems] = useState(BLOG_ITEMS);
   const [openFaqSet, setOpenFaqSet] = useState<Set<number>>(new Set([0]));
+  const [headerScrolled, setHeaderScrolled] = useState(false);
+  const [testimonialSlide, setTestimonialSlide] = useState(0);
+  const [slideDirection, setSlideDirection] = useState<'next' | 'prev'>('next');
+
+  useEffect(() => {
+    const onScroll = () => setHeaderScrolled(window.scrollY > 24);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const totalTestimonialSlides = TESTIMONIAL_ITEMS.length;
+  const visibleTestimonialItems = [
+    TESTIMONIAL_ITEMS[testimonialSlide % totalTestimonialSlides],
+    TESTIMONIAL_ITEMS[(testimonialSlide + 1) % totalTestimonialSlides],
+  ];
+  const goTestimonialPrev = () => {
+    setSlideDirection('prev');
+    setTestimonialSlide((p) => (p <= 0 ? totalTestimonialSlides - 1 : p - 1));
+  };
+  const goTestimonialNext = () => {
+    setSlideDirection('next');
+    setTestimonialSlide((p) => (p >= totalTestimonialSlides - 1 ? 0 : p + 1));
+  };
+
+  useEffect(() => {
+    const id = setInterval(goTestimonialNext, 5000);
+    return () => clearInterval(id);
+  }, []);
 
   const toggleFaq = (index: number) => {
     setOpenFaqSet((prev) => {
@@ -78,6 +108,7 @@ export default function DYNALANDINGPAGE() {
           </motion.section>
         </motion.section>
 
+        <div className="main-content-max">
         {/* Revolution Section with Cards */}
         <motion.section 
           className="main-container2"
@@ -711,50 +742,44 @@ export default function DYNALANDINGPAGE() {
               className="testimonials-container"
               variants={slideInRight}
             >
-              <motion.div 
-                className="testimonials"
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-              >
-                <motion.div 
-                  className="testimonial-card"
-                  variants={scaleIn}
-                  whileHover={{ scale: 1.03, y: -5 }}
-                >
-                  <img className="frame-icon" loading="lazy" alt="" src="/Frame.svg" />
-                  <div className="testimonial-text">"Dyna is like a companion who always reminds me and helps me not to miss deadlines. It really helps me focus more and feel less lonely when working alone."</div>
-                  <div className="testimonial-header"><Avatar1 placeholder={false} size="lg" statusIcon={false} text={false} contrastBorder />
-                    <div className="name4">
-                      <b className="testimonial-name">Markus Freeman</b>
-                      <div className="testimonial-role">Dev Ops - Azious</div>
-                    </div>
-                  </div>
-                </motion.div>
-                <motion.div 
-                  className="testimonial-card2"
-                  variants={scaleIn}
-                  whileHover={{ scale: 1.03, y: -5 }}
-                >
-                  <img className="frame-icon" alt="" src="/Frame1.svg" />
-                  <div className="testimonial-text">"Dyna is like a companion who always reminds me and helps me not to miss deadlines. It really helps me focus more and feel less lonely when working alone."</div>
-                  <div className="testimonial-header2"><Avatar1 placeholder={false} size="lg" statusIcon={false} text={false} contrastBorder />
-                    <div className="name4">
-                      <b className="testimonial-name">Markus Freeman</b>
-                      <div className="testimonial-role2">Dev Ops - Azious</div>
-                    </div>
-                  </div>
-                </motion.div>
-              </motion.div>
+              <div className="testimonials testimonials-slider">
+                <AnimatePresence mode="sync" initial={false} custom={slideDirection}>
+                  <motion.div
+                    key={testimonialSlide}
+                    className="testimonials-slide"
+                    custom={slideDirection}
+                    initial={(dir) => ({ x: dir === 'next' ? '100%' : '-100%', opacity: 0.8 })}
+                    animate={{ x: 0, opacity: 1 }}
+                    exit={(dir) => ({ x: dir === 'next' ? '-100%' : '100%', opacity: 0.8 })}
+                    transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
+                  >
+                    {visibleTestimonialItems.map((item, idx) => (
+                      <motion.div
+                        key={`${testimonialSlide}-${idx}-${item.name}`}
+                        className="testimonial-card"
+                        whileHover={{ scale: 1.03, y: -5 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <img className="frame-icon" loading="lazy" alt="" src={item.frameIcon} />
+                        <div className="testimonial-text">{item.quote}</div>
+                        <div className="testimonial-header">
+                          <Avatar1 placeholder={false} size="lg" statusIcon={false} text={false} contrastBorder />
+                          <div className="name4">
+                            <b className="testimonial-name">{item.name}</b>
+                            <div className="testimonial-role">{item.role}</div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
               <div className="progress-bar-container">
                 <div className="progress-bar-background" />
                 <motion.div 
                   className="progress-bar"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "132px" }}
-                  viewport={{ once: false }}
-                  transition={{ duration: 1, delay: 0.5 }}
+                  animate={{ width: `${((testimonialSlide + 1) / totalTestimonialSlides) * 100}%` }}
+                  transition={{ duration: 0.3 }}
                 />
               </div>
             </motion.section>
@@ -848,13 +873,14 @@ export default function DYNALANDINGPAGE() {
             })}
           </motion.section>
         </motion.section>
+        </div>
         
         <FooterContent property1="Variant2" union="/Union.svg" group="/Group.svg" />
       </main>
 
       {/* Header with animation */}
       <motion.header 
-        className="frame-header"
+        className={`frame-header${headerScrolled ? ' frame-header--scrolled' : ''}`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}

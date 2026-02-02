@@ -152,6 +152,27 @@ export const TARGET_AUDIENCE_LIST = [
   "Une vraie co-pilote, toujours à tes côtés",
 ] as const;
 
+export const TESTIMONIAL_ITEMS = [
+  {
+    quote: '"Dyna is like a companion who always reminds me and helps me not to miss deadlines. It really helps me focus more and feel less lonely when working alone."',
+    name: 'Markus Freeman',
+    role: 'Dev Ops - Azious',
+    frameIcon: '/Frame.svg',
+  },
+  {
+    quote: '"Dyna is like a companion who always reminds me and helps me not to miss deadlines. It really helps me focus more and feel less lonely when working alone."',
+    name: 'Markus Freeman',
+    role: 'Dev Ops - Azious',
+    frameIcon: '/Frame1.svg',
+  },
+  {
+    quote: '"The weekly reports and AI assistant save me hours every week. I finally have a clear view of my business."',
+    name: 'Sophie Martin',
+    role: 'Freelance Designer',
+    frameIcon: '/Frame.svg',
+  },
+] as const;
+
 export const FAQ_ITEMS = [
   {
     question: "À quoi sert l'application Dyna ?",
