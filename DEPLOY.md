@@ -53,7 +53,10 @@ npm run deploy
 Nếu repository của bạn không phải là `DYNA`, hãy cập nhật trong `vite.config.ts`:
 
 ```typescript
-base: '/TEN-REPOSITORY-CUA-BAN/'
+export default defineConfig(({ command }) => {
+  const base = command === 'build' ? '/TEN-REPOSITORY-CUA-BAN/' : '/'
+  // ... rest of config
+})
 ```
 
 ### 2. Kiểm Tra Trước Khi Deploy
