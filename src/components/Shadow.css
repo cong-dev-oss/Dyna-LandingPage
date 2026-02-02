@@ -1,0 +1,22 @@
+.shadow {
+height: 187px;
+width: 151px;
+margin: 0 !important;
+position: absolute;
+bottom: -27px;
+left: calc(50% - 75.5px);
+display: flex;
+align-items: flex-start;
+z-index: 0;
+flex-shrink: 0;
+}
+.true3 {
+height: 187px;
+width: 151px;
+position: relative;
+filter: blur(64px);
+border-radius: var(--br-16);
+background-color: var(--color-gray-1400);
+mix-blend-mode: multiply;
+}
+

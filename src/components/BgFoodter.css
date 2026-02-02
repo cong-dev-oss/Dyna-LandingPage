@@ -1,0 +1,62 @@
+.bg-foodter {
+width: 100%;
+height: 436px;
+position: absolute;
+margin: 0 !important;
+top: 0px;
+left: 0px;
+overflow: hidden;
+flex-shrink: 0;
+z-index: 2;
+}
+.background-shape-parent {
+position: absolute;
+top: -752.5px;
+left: -1230.5px;
+width: 3081.8px;
+height: 1950.4px;
+flex-shrink: 0;
+}
+.background-shape {
+position: absolute;
+top: 1004.5px;
+left: 1584.4px;
+border-radius: var(--br-40);
+background: var(--gradient-6);
+border: var(--border-3);
+box-sizing: border-box;
+width: 1159.9px;
+height: 1159.9px;
+transform:  rotate(150deg);
+transform-origin: 0 0;
+opacity: var(--opacity-0_7);
+}
+.background-shape2 {
+position: absolute;
+top: 1404.54px;
+left: 3081.7px;
+border-radius: var(--br-40);
+background: var(--gradient-7);
+border: var(--border-3);
+box-sizing: border-box;
+width: 1091.7px;
+height: 1091.7px;
+transform:  rotate(150deg);
+transform-origin: 0 0;
+opacity: var(--opacity-0_7);
+}
+.background-shape3 {
+position: absolute;
+top: 731.37px;
+left: 2056.4px;
+border-radius: var(--br-40);
+background: var(--gradient-8);
+border: var(--border-3);
+box-sizing: border-box;
+width: 541.4px;
+height: 541.4px;
+transform:  rotate(150deg);
+transform-origin: 0 0;
+opacity: var(--opacity-0_7);
+}
+

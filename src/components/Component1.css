@@ -1,0 +1,24 @@
+.profile-image {
+height: var(--height-48);
+width: var(--width-48);
+position: relative;
+border-radius: var(--br-80);
+overflow: hidden;
+flex-shrink: 0;
+background-image: url('/Profile-image@3x.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: top;
+}
+.pexels-waldir-vora-5944321-1 {
+position: absolute;
+height: 172.92%;
+width: 115.21%;
+top: -25%;
+right: -6.87%;
+bottom: -47.92%;
+left: -8.33%;
+display: none;
+flex-shrink: 0;
+}
+

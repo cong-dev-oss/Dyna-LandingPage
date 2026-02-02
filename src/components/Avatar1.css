@@ -1,0 +1,19 @@
+.avatar2 {
+height: var(--height-80);
+width: var(--width-80);
+border-radius: var(--radius-full2);
+display: flex;
+align-items: flex-start;
+background-image: url('/Avatar10@3x.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: top;
+}
+.contrast-border-icon {
+height: var(--height-80);
+width: var(--width-80);
+position: relative;
+border-radius: var(--radius-full2);
+object-fit: cover;
+}
+

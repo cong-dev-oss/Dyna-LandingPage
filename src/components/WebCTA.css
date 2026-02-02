@@ -1,0 +1,29 @@
+.root {
+cursor: pointer;
+border: 0.5px solid var(--color-gray-1500);
+padding: var(--Global-Spacing-Sp-12) var(--Global-Spacing-Sp-24);
+background-color: var(--Golbal-color-blue-brand-blue-9);
+flex: 1;
+box-shadow: var(--Web-CTA);
+border-radius: var(--radius-lg);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.root[data-property1='Variant2'] {
+border: 0.5px solid var(--foreground-neutral-primary);
+background-color: var(--foreground-neutral-primary);
+}
+.root[data-property1='Variant2'] .button {
+color: var(--color-midnightblue-100);
+}
+.button {
+position: relative;
+font-size: var(--fs-14);
+line-height: var(--Global-Spacing-Sp-22);
+font-weight: 600;
+font-family: var(--Global-Typography-DM-Sans);
+color: var(--foreground-brand-on-background);
+text-align: center;
+}
+

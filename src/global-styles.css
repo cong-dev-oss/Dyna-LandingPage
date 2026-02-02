@@ -1,0 +1,288 @@
+ @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aeonik+Pro:ital,wght@0,400;0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400&display=swap'); 
+    
+body {
+  margin: 0; line-height: normal;
+}
+:root {
+
+/* Figma Variables */
+
+/* Spacing */
+--Font-size-text-xl: 20px;
+--Global-Spacing-Sp-0: 0px;
+--Global-Spacing-Sp-2: 2px;
+--Global-Spacing-Sp-4: 4px;
+--Global-Spacing-Sp-8: 8px;
+--Global-Spacing-Sp-12: 12px;
+--Global-Spacing-Sp-14: 14px;
+--Global-Spacing-Sp-16: 16px;
+--Global-Spacing-Sp-18: 18px;
+--Global-Spacing-Sp-20: 20px;
+--Global-Spacing-Sp-22: 22px;
+--Global-Spacing-Sp-24: 24px;
+--Global-Spacing-Sp-26: 26px;
+--Global-Spacing-Sp-28: 28px;
+--Global-Spacing-Sp-32: 32px;
+--Global-Spacing-Sp-64: 64px;
+--Global-Spacing-Sp-80: 80px;
+--Global-Spacing-W-384: 384px;
+--Global-Spacing-W-1440: 1440px;
+--Golbal-color-Golbal-Spacing-Sp-32: 32px;
+--Golbal-color-Golbal-Spacing-Sp-80: 80px;
+--Golbal-Spacing-Sp-4: 4px;
+--Golbal-Spacing-Sp-8: 8px;
+--Golbal-Spacing-Sp-12: 12px;
+--Golbal-Spacing-Sp-14: 14px;
+--Golbal-Spacing-Sp-16: 16px;
+--Golbal-Spacing-Sp-18: 18px;
+--Golbal-Spacing-Sp-22: 22px;
+--Golbal-Spacing-Sp-24: 24px;
+--Golbal-Spacing-Sp-26: 26px;
+--Golbal-Spacing-Sp-28: 28px;
+--Golbal-Spacing-Sp-32: 32px;
+--Golbal-Spacing-Sp-34: 34px;
+--Golbal-Spacing-Sp-68: 68px;
+--Golbal-Spacing-Sp-121: 12px;
+--Golbal-Spacing-Sp-161: 16px;
+--Golbal-Spacing-Sp-241: 24px;
+--Line-height-text-xl: 30px;
+--Num-radius-base: 8px;
+--radius-3xl: 20px;
+--radius-4xl: 24px;
+--radius-4xl1: 24px;
+--radius-full: 9999px;
+--radius-full1: 9999px;
+--radius-full2: 9999px;
+--radius-full3: 9999px;
+--radius-lg: 10px;
+--radius-md: 8px;
+--radius-xl: 12px;
+--Shadow-Blur: 16px;
+--Shadow-Position-x: 0px;
+--Shadow-Position-y: 0px;
+--Shadow-Spread: 0px;
+--spacing-3xl: 24px;
+--spacing-7xl: 64px;
+--spacing-lg: 12px;
+--spacing-md: 8px;
+--spacing-md1: 8px;
+--spacing-none: 0px;
+--spacing-sm: 6px;
+--spacing-xl: 16px;
+--spacing-xs: 4px;
+--spacing-xxs: 2px;
+
+/* Color */
+--background-base-default: #01020d;
+--background-brand-default: #1438e1;
+--Colors-Background-bg-primary: #fff;
+--Colors-Background-bg-tertiary: #f2f4f7;
+--Colors-Border-border-primary: #d0d5dd;
+--Colors-Text-text-tertiary-600: #475467;
+--Component-colors-Components-Avatars-avatar-contrast-border: rgba(0, 0, 0, 0.08);
+--foreground-brand-on-background: #eef5ff;
+--foreground-neutral-default: #fff;
+--foreground-neutral-primary: #f7f7f6;
+--foreground-neutral-secondary: rgba(255, 255, 255, 0.5);
+--Global-color-blue-brand-shade-blue-3: #bcd5ff;
+--Global-color-blue-brand-shade-blue-5: #5996ff;
+--Golbal-color-blue-brand-blue-4: #8ebbff;
+--Golbal-color-blue-brand-blue-6: #2f6cff;
+--Golbal-color-blue-brand-blue-9: #000e9c;
+--Shadow-Color: rgba(0, 0, 0, 0.1);
+
+/* Font */
+--Font-family-font-family-body: Inter;
+--Global-Typography-DM-Sans: DM Sans;
+--Golbal-Typography-Aeonik-Pro: Aeonik Pro;
+--Golbal-Typography-DM-Sans: DM Sans;
+
+/* Common Style Variables */
+
+/* Color */
+--Body-16-Medium: #fff;
+--color-aliceblue-100: #ebf0f4;
+--color-aliceblue-200: #d6efff;
+--color-black: #000;
+--color-blueviolet: #1b4cf5;
+--color-coral: #ff8343;
+--color-cornflowerblue: #92a4ef;
+--color-darkgray: rgba(168, 168, 168, 0.1);
+--color-gainsboro-100: #e5e5e2;
+--color-gainsboro-200: #e2e2e2;
+--color-goldenrod: #ffd166;
+--color-gray-100: #fdfdfd;
+--color-gray-200: #84867b;
+--color-gray-300: #272725;
+--color-gray-400: #1d1e1b;
+--color-gray-500: #1b1b1b;
+--color-gray-600: #11120f;
+--color-gray-700: #0d0d12;
+--color-gray-800: rgba(255, 255, 255, 0.11);
+--color-gray-900: rgba(5, 8, 28, 0.5);
+--color-gray-1000: rgba(8, 9, 6, 0.05);
+--color-gray-1100: rgba(253, 253, 253, 0.5);
+--color-gray-1200: rgba(255, 255, 255, 0.02);
+--color-gray-1300: rgba(255, 255, 255, 0.8);
+--color-gray-1400: rgba(0, 0, 0, 0.5);
+--color-gray-1500: rgba(255, 255, 255, 0.2);
+--color-lightsteelblue: rgba(172, 186, 205, 0.1);
+--color-mediumslateblue: rgba(45, 104, 255, 0.15);
+--color-midnightblue-100: #141d57;
+--color-midnightblue-200: rgba(20, 29, 87, 0.5);
+--color-pink: #f9bdc1;
+--color-plum: #dcb9f0;
+--color-royalblue: #067eff;
+--color-silver: #c9cac5;
+--color-slategray: #606a82;
+--color-whitesmoke-100: #f4f7f9;
+--Neutraul-03-808080: #808080;
+
+/* Gap */
+--gap-4: 4px;
+--gap-6: 6px;
+--gap-8: 8px;
+--gap-10: 10px;
+--gap-12: 12px;
+--gap-16: 16px;
+--gap-20: 20px;
+--gap-24: 24px;
+--gap-32: 32px;
+--gap-80: 80px;
+--gap-100: 100px;
+
+/* Padding */
+--padding-0: 0px;
+--padding-2: 2px;
+--padding-8: 8px;
+--padding-10: 10px;
+--padding-12: 12px;
+--padding-14: 14px;
+--padding-15: 15px;
+--padding-16: 16px;
+--padding-20: 20px;
+--padding-22: 22px;
+--padding-30: 30px;
+--padding-64: 64px;
+--padding-80: 80px;
+
+/* BorderRadius */
+--br-0: 0px;
+--br-2: 2px;
+--br-4: 4px;
+--br-6: 6px;
+--br-8: 8px;
+--br-12: 12px;
+--br-16: 16px;
+--br-20: 20px;
+--br-28: 28px;
+--br-32: 32px;
+--br-40: 40px;
+--br-48: 48px;
+--br-50: 50%;
+--br-56: 56px;
+--br-80: 80px;
+--br-1024: 1024px;
+
+/* Font */
+--font-jetbrains-mono: JetBrains Mono;
+--font-karla: Karla;
+--font-poppins: Poppins;
+--font-rubik: Rubik;
+
+/* FontSize */
+--fs-8: 8px;
+--fs-10: 10px;
+--fs-12: 12px;
+--fs-14: 14px;
+--fs-16: 16px;
+--fs-18: 18px;
+--fs-20: 20px;
+--fs-24: 24px;
+--fs-64: 64px;
+
+/* Borders */
+--border-1: 1.5px solid var(--foreground-neutral-primary);
+--border-2: 0.8px solid var(--Component-colors-Components-Avatars-avatar-contrast-border);
+--border-3: 1px solid transparent;
+
+/* Shadows */
+--Depth-card-light: 0px 32px 64px -12px var(--Component-colors-Components-Avatars-avatar-contrast-border), 0px 2.1500000953674316px 0.5px -2px rgba(0, 0, 0, 0.25), 0px 24px 24px -16px rgba(8, 8, 8, 0.04), 0px 6px 13px rgba(8, 8, 8, 0.03), 0px 6px 4px -4px rgba(8, 8, 8, 0.05), 0px 5px 1.5px -4px rgba(8, 8, 8, 0.05);
+--Drop-Shadow: 0px 32px 15px -12px rgba(75, 85, 99, 0.05), 0px 2.1500000953674316px 0.5px -2px rgba(75, 85, 99, 0.25), 0px 24px 24px -16px rgba(75, 85, 99, 0.04);
+--Drop-Shadow1: 0px 32px 64px -12px rgba(75, 85, 99, 0.25), 0px 2.1500000953674316px 0.5px -2px rgba(75, 85, 99, 0.25), 0px 24px 24px -16px rgba(75, 85, 99, 0.04), 0px 6px 13px rgba(75, 85, 99, 0.03), 0px 6px 4px -4px rgba(75, 85, 99, 0.05), 0px 5px 1.5px -4px rgba(75, 85, 99, 0.05);
+--glass-01: 0px 40px 64px -32px rgba(15, 15, 15, 0.1);
+--Shadow-block: 0px 0px 16px var(--Shadow-Color);
+--Web-CTA: 0px -2px 2px var(--Shadow-Color) inset;
+
+/* Gradients */
+--gradient-1: conic-gradient(from 180deg at 50% 50%, rgba(47, 108, 255, 0.18) -2.47deg, #0042e2 1.81deg, #0d53fb 76.1deg, rgba(255, 255, 255, 0.15) 121.11deg, rgba(255, 255, 255, 0) 300.72deg, rgba(47, 108, 255, 0.18) 357.53deg, #0042e2 361.81deg);
+--gradient-2: linear-gradient(180deg, rgba(253, 253, 253, 0.23), rgba(253, 253, 253, 0.75));
+--gradient-3: linear-gradient(180deg, #ebebeb, rgba(130, 142, 174, 0.2));
+--gradient-4: linear-gradient(180deg, rgba(226, 226, 226, 0), rgba(226, 226, 226, 0.31)) border-box;
+--gradient-5: linear-gradient(0deg, var(--Golbal-color-blue-brand-blue-9), var(--Golbal-color-blue-brand-blue-6));
+--gradient-6: linear-gradient(-60deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1)) padding-box, linear-gradient(95.82deg, rgba(255, 255, 255, 0.04), rgba(64, 136, 244, 0)) border-box;
+--gradient-7: linear-gradient(141.05deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1)) padding-box, linear-gradient(-19.25deg, rgba(255, 255, 255, 0.1), rgba(64, 136, 244, 0)) border-box;
+--gradient-8: linear-gradient(36.99deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1)) padding-box, linear-gradient(211.94deg, rgba(255, 255, 255, 0.1), rgba(64, 136, 244, 0)) border-box;
+
+/* WidthHeights */
+--height-1: 1px;
+--height-2: 2px;
+--height-4: 4px;
+--height-8: 8px;
+--height-12: 12px;
+--height-16: 16px;
+--height-18: 18px;
+--height-20: 20px;
+--height-28: 28px;
+--height-32: 32px;
+--height-36: 36px;
+--height-40: 40px;
+--height-46: 46px;
+--height-48: 48px;
+--height-51: 51px;
+--height-59: 59px;
+--height-80: 80px;
+--height-192: 192px;
+--height-406: 406px;
+--height-1024: 1024px;
+--min-w-60: 60px;
+--min-w-283: 283px;
+--width-8: 8px;
+--width-12: 12px;
+--width-16: 16px;
+--width-20: 20px;
+--width-30: 30px;
+--width-32: 32px;
+--width-40: 40px;
+--width-48: 48px;
+--width-51: 51px;
+--width-59: 59px;
+--width-80: 80px;
+--width-167: 167px;
+--width-257: 257px;
+--width-1440: 1440px;
+
+/* LineHeights */
+--lh-10: 10px;
+--lh-18: 18px;
+--lh-24: 24px;
+
+/* LetterSpacings */
+--ls--0_02: -0.02;
+
+/* Opacities */
+--opacity-0_1: 0.1;
+--opacity-0_7: 0.7;
+
+
+--Glassy-Default: blur(40px);
+
+}
+  
+  

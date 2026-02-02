@@ -1,0 +1,21 @@
+.tencentdb-for-mariadb-3d-cn {
+position: absolute;
+top: 0px;
+left: calc(50% - 133.45px);
+width: 257.3px;
+height: 191.6px;
+}
+.tencentdb-for-mariadb {
+position: absolute;
+height: 100%;
+width: 100%;
+top: 0%;
+right: 0%;
+bottom: 0%;
+left: 0%;
+max-width: 100%;
+overflow: hidden;
+max-height: 100%;
+object-fit: cover;
+}
+

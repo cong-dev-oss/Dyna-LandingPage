@@ -1,0 +1,20 @@
+.wrap {
+position: absolute;
+top: 0px;
+left: 0px;
+width: var(--width-167);
+height: var(--height-192);
+display: flex;
+align-items: flex-start;
+}
+.true4 {
+height: var(--height-192);
+width: var(--width-167);
+position: relative;
+backdrop-filter: blur(32px);
+border-radius: var(--br-28);
+background: var(--gradient-2);
+border: var(--border-1);
+box-sizing: border-box;
+}
+

@@ -1,0 +1,103 @@
+.background {
+width: 100vw;
+height: 100vh;
+min-height: var(--height-1024);
+margin: 0 !important;
+position: absolute;
+top: 0px;
+left: 0px;
+background-color: var(--foreground-neutral-default);
+overflow: hidden;
+flex-shrink: 0;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 116px 148px 487px;
+box-sizing: border-box;
+isolation: isolate;
+gap: 113px;
+z-index: 0;
+}
+.background-child {
+width: 100%;
+height: 100%;
+position: absolute;
+margin: 0 !important;
+top: 0px;
+left: 0px;
+object-fit: cover;
+z-index: 0;
+flex-shrink: 0;
+}
+.wrapper-vector {
+width: 106.18%;
+height: 48.83%;
+position: absolute;
+margin: 0 !important;
+top: 0%;
+right: -1.46%;
+bottom: 51.17%;
+left: -4.72%;
+filter: blur(150px);
+max-width: 100%;
+max-height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1;
+flex-shrink: 0;
+}
+.vector-icon {
+width: 100%;
+height: 100%;
+filter: blur(150px);
+overflow: hidden;
+object-fit: contain;
+position: absolute;
+left: 0px;
+top: 0px;
+transform: scale(1.196);
+}
+.wrapper-group-39465 {
+width: 721.4px;
+height: 511px;
+position: absolute;
+margin: 0 !important;
+top: -91px;
+left: calc(50% - 384.7px);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 2;
+flex-shrink: 0;
+}
+.wrapper-group-39465-child {
+width: 100%;
+height: 100%;
+object-fit: contain;
+position: absolute;
+left: 0px;
+top: 10px;
+transform: scale(1.039);
+}
+.background-item {
+width: 1096.3px;
+height: 421px;
+position: relative;
+margin: 0 auto;
+z-index: 3;
+flex-shrink: 0;
+}
+.tencent-tdsql-c-3d-cn-wrapper {
+width: 746px;
+height: var(--height-406);
+display: flex;
+align-items: flex-start;
+justify-content: center;
+padding: var(--padding-0);
+box-sizing: border-box;
+z-index: 4;
+flex-shrink: 0;
+margin: 0 auto;
+}
+

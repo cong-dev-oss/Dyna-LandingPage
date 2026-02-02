@@ -1,0 +1,51 @@
+.root4 {
+width: 158px;
+height: var(--height-46);
+display: flex;
+align-items: flex-start;
+gap: 5.9px;
+}
+.root4[data-property1='Variant2'] {
+position: relative;
+width: 158px;
+height: var(--height-46);
+}
+.root4[data-property1='Variant2'] .union-icon {
+height: 100%;
+width: 71.84%;
+position: absolute;
+z-index: 1;
+top: 0%;
+right: 0%;
+bottom: 0%;
+left: 28.16%;
+max-width: 100%;
+overflow: hidden;
+max-height: 100%;
+}
+.root4[data-property1='Variant2'] .group-icon {
+height: 77.39%;
+width: 24.43%;
+position: absolute;
+z-index: 2;
+top: 0%;
+right: 75.57%;
+bottom: 22.61%;
+left: 0%;
+max-width: 100%;
+overflow: hidden;
+max-height: 100%;
+}
+.union-icon {
+height: 35.6px;
+width: 38.6px;
+position: relative;
+z-index: 2;
+}
+.group-icon {
+height: var(--height-46);
+width: 113.5px;
+position: relative;
+z-index: 1;
+}
+

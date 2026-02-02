@@ -1,0 +1,29 @@
+.root3 {
+height: var(--height-51);
+width: var(--width-51);
+position: relative;
+border-radius: var(--radius-full2);
+background-image: url('/Avatar@3x.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: top;
+flex-shrink: 0;
+}
+.root3[data-size='xl'][data-placeholder='false'][data-text='false'][data-statusIcon='false'] {
+background-image: url('/Avatar4@3x.png');
+display: none;
+}
+.contrast-border2 {
+position: absolute;
+height: 100%;
+width: 100%;
+top: 0px;
+right: 0px;
+bottom: 0px;
+left: 0px;
+border-radius: var(--radius-full2);
+border: var(--border-2);
+box-sizing: border-box;
+overflow: hidden;
+}
+
