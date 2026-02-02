@@ -1,0 +1,9 @@
+/* Icon1 Component Styles */
+/* User avatar image for testimonials */
+
+.content-block-image {
+  height: var(--height-48);
+  width: var(--width-48);
+  position: relative;
+  border-radius: var(--br-80);
+}

@@ -5,3 +5,56 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aeonik+Pro:ital,wght@0,400;0,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400&display=swap');
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* Figma Variables - Spacing */
+  --Global-Spacing-Sp-0: 0px;
+  --Global-Spacing-Sp-4: 4px;
+  --Global-Spacing-Sp-16: 16px;
+  --Global-Spacing-Sp-24: 24px;
+  --Golbal-Spacing-Sp-14: 14px;
+  --Golbal-Spacing-Sp-22: 22px;
+  --Golbal-Spacing-Sp-28: 28px;
+  --Golbal-Spacing-Sp-34: 34px;
+  --radius-4xl: 24px;
+  --radius-xl: 12px;
+
+  /* Figma Variables - Color */
+  --Global-color-blue-brand-shade-blue-3: #bcd5ff;
+  --Global-color-blue-brand-shade-blue-5: #5996ff;
+
+  /* Figma Variables - Font */
+  --Golbal-Typography-DM-Sans: DM Sans;
+
+  /* Common Style Variables - Color */
+  --color-black: #000;
+  --color-gainsboro: #e5e5e2;
+  --color-gray-100: #fdfdfd;
+  --color-gray-200: #272725;
+  --color-gray-300: #1d1e1b;
+  --color-gray-400: #1b1b1b;
+  --color-mediumslateblue: rgba(45, 104, 255, 0.15);
+  --color-midnightblue: #141d57;
+  --Title-20-Regular: #fff;
+
+  /* Common Style Variables - Border Radius */
+  --br-80: 80px;
+
+  /* Common Style Variables - Font */
+  --font-jetbrains-mono: JetBrains Mono;
+  --font-poppins: Poppins;
+
+  /* Common Style Variables - Gradients */
+  --gradient-1: linear-gradient(180deg, rgba(226, 226, 226, 0), rgba(226, 226, 226, 0.31)) border-box;
+
+  /* Common Style Variables - Width/Heights */
+  --height-12: 12px;
+  --height-48: 48px;
+  --width-12: 12px;
+  --width-48: 48px;
+}

@@ -1,0 +1,190 @@
+/* ContentBlock Component Styles */
+/* Testimonial/Feedback Card with visual gradient background and DYNA branding */
+
+.content-block {
+  width: 433px;
+  border-radius: var(--radius-4xl);
+  background-color: var(--Title-20-Regular);
+  border: 1.5px solid var(--color-gainsboro);
+  box-sizing: border-box;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-height: 523px;
+}
+
+/* Top section with gradient background */
+.content-block2 {
+  align-self: stretch;
+  height: 377px;
+  position: relative;
+  border-radius: 0px 0px var(--radius-4xl) var(--radius-4xl);
+  background: linear-gradient(180deg, #0024ff, var(--Global-color-blue-brand-shade-blue-5) 50%, var(--Global-color-blue-brand-shade-blue-3));
+  flex-shrink: 0;
+  text-align: left;
+  font-size: 16px;
+  color: var(--color-midnightblue);
+  font-family: var(--font-poppins);
+}
+
+/* User testimonial card (white card overlay) */
+.content-block3 {
+  position: absolute;
+  bottom: 25.5px;
+  left: calc(50% - 164.5px);
+  border-radius: var(--radius-xl);
+  background-color: var(--Title-20-Regular);
+  border: 1px solid var(--Title-20-Regular);
+  box-sizing: border-box;
+  width: 329px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 15px;
+  gap: var(--Global-Spacing-Sp-16);
+  flex-shrink: 0;
+}
+
+/* User info container (avatar + name + rating) */
+.content-block4 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Text container (name + rating) */
+.content-block-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* User name */
+.content-block-name {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+/* Star rating container */
+.content-block-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--Global-Spacing-Sp-4);
+}
+
+/* Individual star icon */
+.content-block-star {
+  height: var(--height-12);
+  width: var(--width-12);
+  position: relative;
+}
+
+/* User review/testimonial text */
+.content-block-review {
+  width: 100%;
+  position: relative;
+  font-size: var(--Golbal-Spacing-Sp-14);
+  line-height: var(--Golbal-Spacing-Sp-22);
+  font-family: var(--Golbal-Typography-DM-Sans);
+  color: var(--color-gray-200);
+  display: inline-block;
+  max-width: 297px;
+}
+
+/* Decorative merged asset (planet/background image) */
+.merged-asset-1-icon {
+  position: absolute;
+  top: -36.5px;
+  left: calc(50% - 193.5px);
+  width: 396px;
+  height: 396px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* DYNA branding badge container */
+.content-block6 {
+  position: absolute;
+  top: 93.5px;
+  right: 136.3px;
+  width: 68.2px;
+  height: 68.2px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 3.9px 9px;
+  box-sizing: border-box;
+  background-image: url('/Content-Block@3x.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  flex-shrink: 0;
+  font-size: 8px;
+  color: var(--color-gray-400);
+  font-family: var(--font-jetbrains-mono);
+}
+
+/* DYNA badge inner container */
+.content-block7 {
+  border-radius: 4px;
+  background-color: var(--color-gray-100);
+  border: 1px solid var(--color-mediumslateblue);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+/* DYNA text */
+.content-block-text2 {
+  position: relative;
+  letter-spacing: -0.02em;
+  line-height: 10px;
+}
+
+/* Bottom section: Community feedback */
+.content-block8 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--Global-Spacing-Sp-24);
+  gap: 8px;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: 24px;
+  color: var(--color-black);
+  font-family: var(--Golbal-Typography-DM-Sans);
+}
+
+/* Feedback title */
+.text {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  line-height: var(--Golbal-Spacing-Sp-34);
+  font-weight: 600;
+  font-family: inherit;
+}
+
+/* Feedback description text */
+.text2 {
+  width: 100%;
+  position: relative;
+  font-size: 20px;
+  line-height: var(--Golbal-Spacing-Sp-28);
+  color: var(--color-gray-300);
+  display: inline-block;
+  max-width: 382px;
+}
