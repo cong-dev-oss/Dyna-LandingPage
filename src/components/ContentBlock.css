@@ -121,7 +121,7 @@
   justify-content: flex-end;
   padding: 3.9px 9px;
   box-sizing: border-box;
-  background-image: url('/Content-Block@3x.png');
+  background-image: var(--bg-content-block);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;

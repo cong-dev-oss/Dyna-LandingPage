@@ -3,14 +3,14 @@ height: var(--height-51);
 width: var(--width-51);
 position: relative;
 border-radius: var(--radius-full2);
-background-image: url('/Avatar@3x.png');
+background-image: var(--bg-avatar);
 background-size: cover;
 background-repeat: no-repeat;
 background-position: top;
 flex-shrink: 0;
 }
 .root3[data-size='xl'][data-placeholder='false'][data-text='false'][data-statusIcon='false'] {
-background-image: url('/Avatar4@3x.png');
+background-image: var(--bg-avatar-4);
 display: none;
 }
 .contrast-border2 {
