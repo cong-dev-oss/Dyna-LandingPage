@@ -849,7 +849,7 @@ export default function DYNALANDINGPAGE() {
                         className="menu-button-icon"
                         loading={index === 0 ? 'lazy' : undefined}
                         alt=""
-                        src={isOpen ? '/Menu-button.svg' : '/Menu-button1@2x.png'}
+                        src={getAssetPath(isOpen ? '/Menu-button.svg' : '/Menu-button1@2x.png')}
                         animate={{ rotate: isOpen ? 0 : 180 }}
                         transition={{ duration: 0.3, ease: 'easeInOut' }}
                       />
