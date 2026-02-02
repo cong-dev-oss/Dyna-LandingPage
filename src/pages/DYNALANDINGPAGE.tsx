@@ -14,7 +14,6 @@ import Avatar1 from '../components/Avatar1';
 import Blog from '../components/Blog';
 import FooterContent from '../components/FooterContent';
 import Logo from '../components/Logo';
-import CustomCursor from '../components/CustomCursor';
 import {
   fadeInUp,
   fadeIn,
@@ -80,9 +79,6 @@ export default function DYNALANDINGPAGE() {
 
   return (
     <div className="dyna-landingpage">
-      {/* Custom Cursor Effect */}
-      <CustomCursor />
-      
       <main className="main-container-parent">
         {/* Hero Section */}
         <motion.section 
