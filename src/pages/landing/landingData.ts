@@ -151,3 +151,26 @@ export const TARGET_AUDIENCE_LIST = [
   'Te permet de rester concentré sur l\'essentiel',
   "Une vraie co-pilote, toujours à tes côtés",
 ] as const;
+
+export const FAQ_ITEMS = [
+  {
+    question: "À quoi sert l'application Dyna ?",
+    description: "L'application permet de centraliser les données clés de ton business (chiffre d'affaires, ventes, objectifs, taux de conversion...) pour les transformer en indicateurs clairs et visuels. Concrètement, elle te permet d'obtenir une visibilité complète pour prendre de meilleures décisions, et améliorer ton chiffre d'affaires !",
+  },
+  {
+    question: "Comment se présente le management 2.0 opéré par Dyna ?",
+    description: "Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.",
+  },
+  {
+    question: "Je peux utiliser Dyna quelque soit mon niveau en business ?",
+    description: "Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.",
+  },
+  {
+    question: "Quand est-ce que Dyna sera disponible ?",
+    description: "Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.",
+  },
+  {
+    question: "Dyna ne sera utilisable que sur mobile ?",
+    description: "Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.",
+  },
+];

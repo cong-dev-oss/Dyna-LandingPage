@@ -1,6 +1,6 @@
 // @ts-nocheck - Single default export; TS falsely reports "multiple default exports" in large JSX files
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Bg from '../components/Bg';
 import WebCTA from '../components/WebCTA';
 import Component1 from '../components/Component1';
@@ -27,6 +27,7 @@ import {
   AVATAR_ITEMS,
   BLOG_ITEMS,
   TARGET_AUDIENCE_LIST,
+  FAQ_ITEMS,
 } from './landing';
 import './DYNALANDINGPAGE.css';
 
@@ -34,6 +35,16 @@ export default function DYNALANDINGPAGE() {
   const [tabItemItems] = useState(TAB_ITEMS);
   const [avatarItems] = useState(AVATAR_ITEMS);
   const [blogItems] = useState(BLOG_ITEMS);
+  const [openFaqSet, setOpenFaqSet] = useState<Set<number>>(new Set([0]));
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqSet((prev) => {
+      const next = new Set(prev);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  };
 
   return (
     <div className="dyna-landingpage">
@@ -545,8 +556,7 @@ export default function DYNALANDINGPAGE() {
             variants={fadeInUp}
           >
             <h2 className="main-title">Deviens membre fondateur</h2>
-            <h3 className="subtitle3">Rejoins Dyna parmi les premiers !"
-</h3>
+            <h3 className="subtitle3">Rejoins Dyna parmi les premiers !</h3>
             <motion.div 
               className="tabs-group"
               variants={staggerContainer}
@@ -795,55 +805,47 @@ export default function DYNALANDINGPAGE() {
             whileInView="visible"
             viewport={{ once: false }}
           >
-            <motion.div className="faq-item-container" variants={fadeInUp}>
-              <div className="faq-item-header">
-                <h3 className="faq-item-question">À quoi sert l'application Dyna ?</h3>
-                <img className="menu-button-icon" loading="lazy" alt="" src="/Menu-button.svg" />
-              </div>
-              <div className="faq-item-description-container">
-                <div className="description4">L'application permet de centraliser les données clés de ton business (chiffre d'affaires, ventes, objectifs, taux de conversion...) pour les transformer en indicateurs clairs et visuels. Concrètement, elle te permet d'obtenir une visibilité complète pour prendre de meilleures décisions, et améliorer ton chiffre d'affaires !</div>
-              </div>
-            </motion.div>
-            <div className="bottom-line" />
-            <motion.div className="faq-item-container2" variants={fadeInUp}>
-              <div className="faq-item-header2">
-                <h3 className="faq-item-question2">Comment se présente le management 2.0 opéré par Dyna ?</h3>
-                <img className="menu-button-icon" alt="" src="/Menu-button1@2x.png" />
-              </div>
-              <div className="description-wrapper">
-                <div className="description5">Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.</div>
-              </div>
-            </motion.div>
-            <div className="bottom-line" />
-            <motion.div className="faq-item-container2" variants={fadeInUp}>
-              <div className="faq-item-header2">
-                <h3 className="faq-item-question2">Je peux utiliser Dyna quelque soit mon niveau en business ?</h3>
-                <img className="menu-button-icon" alt="" src="/Menu-button1@2x.png" />
-              </div>
-              <div className="description-wrapper">
-                <div className="description5">Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.</div>
-              </div>
-            </motion.div>
-            <div className="bottom-line" />
-            <motion.div className="faq-item-container2" variants={fadeInUp}>
-              <div className="faq-item-header2">
-                <h3 className="faq-item-question2">Quand est-ce que Dyna sera disponible ?</h3>
-                <img className="menu-button-icon" alt="" src="/Menu-button1@2x.png" />
-              </div>
-              <div className="description-wrapper">
-                <div className="description5">Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.</div>
-              </div>
-            </motion.div>
-            <div className="bottom-line" />
-            <motion.div className="faq-item-container2" variants={fadeInUp}>
-              <div className="faq-item-header2">
-                <h3 className="faq-item-question2">Dyna ne sera utilisable que sur mobile ?</h3>
-                <img className="menu-button-icon" alt="" src="/Menu-button1@2x.png" />
-              </div>
-              <div className="description-wrapper">
-                <div className="description5">Your data can be transformed, organized, and shared across applications for anyone to query with just a few keystrokes. Stay current on the latest Onix project developments, news, and content, updated daily. Stay current on the latest Onix project developments, news, and content, updated daily.</div>
-              </div>
-            </motion.div>
+            {FAQ_ITEMS.map((item, index) => {
+              const isOpen = openFaqSet.has(index);
+              return (
+                <div key={index}>
+                  <motion.div
+                    className={isOpen ? 'faq-item-container2' : 'faq-item-container'}
+                    variants={fadeInUp}
+                    onClick={() => toggleFaq(index)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    <div className={isOpen ? 'faq-item-header2' : 'faq-item-header'}>
+                      <h3 className={isOpen ? 'faq-item-question2' : 'faq-item-question'}>
+                        {item.question}
+                      </h3>
+                      <motion.img
+                        className="menu-button-icon"
+                        loading={index === 0 ? 'lazy' : undefined}
+                        alt=""
+                        src={isOpen ? '/Menu-button.svg' : '/Menu-button1@2x.png'}
+                        animate={{ rotate: isOpen ? 0 : 180 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      />
+                    </div>
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          className="faq-item-description-open"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                        >
+                          <div className="description4">{item.description}</div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                  {index < FAQ_ITEMS.length - 1 && <div className="bottom-line" />}
+                </div>
+              );
+            })}
           </motion.section>
         </motion.section>
         
