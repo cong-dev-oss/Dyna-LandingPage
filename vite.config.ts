@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
-  const base = command === 'build' ? '/DYNA/' : '/'
+  const base = command === 'build' ? '/Dyna-LandingPage/' : '/'
   
   return {
     plugins: [react()],
     publicDir: 'public',
-    base, // Use '/DYNA/' for production, '/' for development
+    base, // Use '/Dyna-LandingPage/' for production, '/' for development
     server: {
       port: 3000,
       open: true
