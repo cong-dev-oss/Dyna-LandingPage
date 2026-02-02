@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import TencentTDSQLC3DCN from "./TencentTDSQLC3DCN";
+import getAssetPath from '../utils/assetPath';
 import './Bg.css';
 
 export type BgType = {
@@ -12,14 +13,14 @@ export type BgType = {
 const Bg: FunctionComponent<BgType> = ({ className="", property1 }) => {
   return (
     <div className={`background ${className}`}>
-      <img className="background-child" alt="" src="/Rectangle-647@2x.png" />
+      <img className="background-child" alt="" src={getAssetPath("/Rectangle-647@2x.png")} />
       <div className="wrapper-vector">
-        <img className="vector-icon" alt="" src="/Vector.svg" />
+        <img className="vector-icon" alt="" src={getAssetPath("/Vector.svg")} />
       </div>
       <div className="wrapper-group-39465">
-        <img className="wrapper-group-39465-child" alt="" src="/Group-39465.svg" />
+        <img className="wrapper-group-39465-child" alt="" src={getAssetPath("/Group-39465.svg")} />
       </div>
-      <img className="background-item" alt="" src="/Group-39466.svg" />
+      <img className="background-item" alt="" src={getAssetPath("/Group-39466.svg")} />
       <section className="tencent-tdsql-c-3d-cn-wrapper"><TencentTDSQLC3DCN property1={property1} />
       </section>
     </div>);

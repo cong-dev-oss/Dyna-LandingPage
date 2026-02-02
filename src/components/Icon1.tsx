@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import getAssetPath from '../utils/assetPath';
 import './Icon1.css';
 
 /**
@@ -22,7 +23,7 @@ const Icon1: FunctionComponent<Icon1Type> = ({
     <img 
       className={`content-block-image ${className}`} 
       alt={alt} 
-      src="/Content-Block-Image.svg" 
+      src={getAssetPath("/Content-Block-Image.svg")} 
     />
   );
 };

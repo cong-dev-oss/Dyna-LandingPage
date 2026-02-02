@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import Icon1 from "./Icon1";
+import getAssetPath from '../utils/assetPath';
 import './ContentBlock.css';
 
 /**
@@ -45,7 +46,7 @@ const ContentBlock: FunctionComponent<ContentBlockType> = ({
                     className="content-block-star" 
                     loading="lazy" 
                     alt="" 
-                    src="/Content-Block-Star.svg" 
+                    src={getAssetPath("/Content-Block-Star.svg")} 
                   />
                 ))}
               </div>
@@ -58,7 +59,7 @@ const ContentBlock: FunctionComponent<ContentBlockType> = ({
         <img 
           className="merged-asset-1-icon" 
           alt="Decorative background" 
-          src="/merged-asset-1@2x.png" 
+          src={getAssetPath("/merged-asset-1@2x.png")} 
         />
         
         {/* DYNA branding badge */}

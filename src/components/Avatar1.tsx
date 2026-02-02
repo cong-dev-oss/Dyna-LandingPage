@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import getAssetPath from '../utils/assetPath';
 import './Avatar1.css';
 
 export type Avatar1Type = {
@@ -17,7 +18,7 @@ export type Avatar1Type = {
 const Avatar1: FunctionComponent<Avatar1Type> = ({ className="", placeholder=false, size="xs", statusIcon=false, text=false, contrastBorder=true }) => {
   return (
     <div className={`avatar2 ${className}`} data-placeholder={placeholder} data-size={size} data-statusIcon={statusIcon} data-text={text}>
-      {!!contrastBorder && (<img className="contrast-border-icon" loading="lazy" alt="" src="/Contrast-border@2x.png" />)}
+      {!!contrastBorder && (<img className="contrast-border-icon" loading="lazy" alt="" src={getAssetPath("/Contrast-border@2x.png")} />)}
     </div>);
 };
 

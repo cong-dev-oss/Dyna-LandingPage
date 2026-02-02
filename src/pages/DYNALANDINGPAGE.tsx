@@ -30,6 +30,7 @@ import {
   FAQ_ITEMS,
   TESTIMONIAL_ITEMS,
 } from './landing';
+import getAssetPath from '../utils/assetPath';
 import './DYNALANDINGPAGE.css';
 
 export default function DYNALANDINGPAGE() {
@@ -140,7 +141,7 @@ export default function DYNALANDINGPAGE() {
                   <h3 className="card-title">Résumé de la réunion</h3>
                   <div className="card-subtitle">15 juillet 2025</div>
                 </div>
-                <img className="frame-child" alt="" src="/Rectangle-649@2x.png" />
+                <img className="frame-child" alt="" src={getAssetPath("/Rectangle-649@2x.png")} />
               </motion.div>
             </motion.div>
 
@@ -157,7 +158,7 @@ export default function DYNALANDINGPAGE() {
                   <h3 className="card-title">Votre score DYNA</h3>
                   <div className="card-subtitle">Voyez votre activité clairement</div>
                 </div>
-                <img className="frame-child" alt="" src="/Rectangle-6491@2x.png" />
+                <img className="frame-child" alt="" src={getAssetPath("/Rectangle-6491@2x.png")} />
               </motion.div>
               <motion.div 
                 className="card-image"
@@ -168,7 +169,7 @@ export default function DYNALANDINGPAGE() {
                   <h3 className="card-title">Quick Boost</h3>
                   <div className="frame-inner" />
                 </div>
-                <img className="frame-2087327354-4" alt="" src="/Frame-2087327354-4@2x.png" />
+                <img className="frame-2087327354-4" alt="" src={getAssetPath("/Frame-2087327354-4@2x.png")} />
               </motion.div>
             </motion.section>
 
@@ -181,7 +182,7 @@ export default function DYNALANDINGPAGE() {
                 variants={scaleIn}
                 whileHover={{ scale: 1.03, y: -5, transition: { duration: 0.3 } }}
               >
-                <img className="image-62-icon" alt="" src="/image-62@2x.png" />
+                <img className="image-62-icon" alt="" src={getAssetPath("/image-62@2x.png")} />
                 <div className="card-content">
                   <h3 className="card-title">Pour les indépendants</h3>
                   <div className="card-subtitle3">Conçu pour les indépendants</div>
@@ -194,7 +195,7 @@ export default function DYNALANDINGPAGE() {
               >
                 <h3 className="card-title5">Gestionnaire digital</h3>
                 <div className="card-subtitle4">Partenaire de croissance</div>
-                <img className="card-content-child" alt="" src="/Frame-1321314117@2x.png" />
+                <img className="card-content-child" alt="" src={getAssetPath("/Frame-1321314117@2x.png")} />
               </motion.div>
             </motion.section>
 
@@ -211,7 +212,7 @@ export default function DYNALANDINGPAGE() {
                   <h3 className="card-title">Selon la tendance</h3>
                   <div className="card-subtitle">Décidez en temps réel.</div>
                 </div>
-                <img className="frame-child" alt="" src="/Rectangle-6492@2x.png" />
+                <img className="frame-child" alt="" src={getAssetPath("/Rectangle-6492@2x.png")} />
               </motion.div>
               <motion.div 
                 className="frame-parent2"
@@ -222,7 +223,7 @@ export default function DYNALANDINGPAGE() {
                   <div className="card-subtitle6">Customers</div>
                   <div className="card-title7">+10h gagnées | semaine</div>
                 </div>
-                <img className="frame-child" alt="" src="/Rectangle-6493@2x.png" />
+                <img className="frame-child" alt="" src={getAssetPath("/Rectangle-6493@2x.png")} />
               </motion.div>
             </motion.section>
 
@@ -240,7 +241,7 @@ export default function DYNALANDINGPAGE() {
                 </div>
               </div>
             </motion.div>
-            <img className="content-container-child" alt="" src="/Frame-2087327353.svg" />
+            <img className="content-container-child" alt="" src={getAssetPath("/Frame-2087327353.svg")} />
           </motion.div>
         </motion.section>
 
@@ -271,7 +272,7 @@ export default function DYNALANDINGPAGE() {
             >
               {TARGET_AUDIENCE_LIST.map((text, index) => (
                 <motion.div key={index} className="li" variants={listItemVariant}>
-                  <img className="bullet-icon" loading={index === 0 ? "lazy" : undefined} alt="" src="/Bullet.svg" />
+                  <img className="bullet-icon" loading={index === 0 ? "lazy" : undefined} alt="" src={getAssetPath("/Bullet.svg")} />
                   <h3 className={`list-item-text${index === 1 ? '2' : index === 3 ? '4' : index === 4 ? '5' : ''}`}>{text}</h3>
                 </motion.div>
               ))}
@@ -285,14 +286,14 @@ export default function DYNALANDINGPAGE() {
             <motion.img 
               className="img-01-icon" 
               alt="" 
-              src="/img-01@2x.png"
+              src={getAssetPath("/img-01@2x.png")}
               variants={imageFloat}
               animate="animate"
             />
             <div className="img-02">
-              <img className="pexels-eric-dekker-3334048-1-icon" alt="" src="/pexels-eric-dekker-3334048-1@2x.png" />
+              <img className="pexels-eric-dekker-3334048-1-icon" alt="" src={getAssetPath("/pexels-eric-dekker-3334048-1@2x.png")} />
               <div className="image-container">
-                <img className="image-icon" loading="lazy" alt="" src="/Image@2x.png" />
+                <img className="image-icon" loading="lazy" alt="" src={getAssetPath("/Image@2x.png")} />
               </div>
             </div>
             <div className="small-element" />
@@ -302,7 +303,7 @@ export default function DYNALANDINGPAGE() {
               className="img-03-icon" 
               loading="lazy" 
               alt="" 
-              src="/img-03@2x.png"
+              src={getAssetPath("/img-03@2x.png")}
               variants={imageFloat}
               animate="animate"
               transition={{ delay: 0.5 }}
@@ -326,7 +327,7 @@ export default function DYNALANDINGPAGE() {
                         key={i}
                         className="star-icon" 
                         alt="" 
-                        src="/Star.svg"
+                        src={getAssetPath("/Star.svg")}
                         initial={{ opacity: 0, scale: 0 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: false }}
@@ -419,7 +420,7 @@ export default function DYNALANDINGPAGE() {
                                 <div className="search-options-child" />
                               </div>
                             </div>
-                            <img className="search-magnifying-glass" alt="" src="/search-magnifying-glass.svg" />
+                            <img className="search-magnifying-glass" alt="" src={getAssetPath("/search-magnifying-glass.svg")} />
                           </div>
                           <div className="search-results-wrapper">
                             <div className="search-results">
@@ -429,10 +430,10 @@ export default function DYNALANDINGPAGE() {
                                   <div className="search-progress2" />
                                   <div className="search-progress2" />
                                 </div>
-                                <img className="search-image-icon" loading="lazy" alt="" src="/Search-Image@2x.png" />
+                                <img className="search-image-icon" loading="lazy" alt="" src={getAssetPath("/Search-Image@2x.png")} />
                               </div>
                               <div className="search-item2">
-                                <img className="search-image-icon" alt="" src="/Search-Image1@2x.png" />
+                                <img className="search-image-icon" alt="" src={getAssetPath("/Search-Image1@2x.png")} />
                                 <div className="search-details">
                                   <div className="search-progress" />
                                   <div className="search-progress2" />
@@ -447,7 +448,7 @@ export default function DYNALANDINGPAGE() {
                     <div className="shadow-parent"><Shadow property1 />
                       <div className="task-container">
                         <div className="wrap-parent"><Wrap lightMode />
-                          <img className="image-frame-icon" alt="" src="/Image-Frame@2x.png" />
+                          <img className="image-frame-icon" alt="" src={getAssetPath("/Image-Frame@2x.png")} />
                           <div className="inside-container">
                             <div className="inside3" />
                             <div className="frame-parent3">
@@ -456,21 +457,21 @@ export default function DYNALANDINGPAGE() {
                                   <div className="step-name">Tasks to achieve</div>
                                   <div className="task-list">
                                     <div className="task-item">
-                                      <img className="icon" alt="" src="/icon.svg" />
+                                      <img className="icon" alt="" src={getAssetPath("/icon.svg")} />
                                       <div className="task-details">
                                         <div className="task-progress" />
                                         <div className="search-progress2" />
                                       </div>
                                     </div>
                                     <div className="task-item">
-                                      <img className="icon" alt="" src="/icon.svg" />
+                                      <img className="icon" alt="" src={getAssetPath("/icon.svg")} />
                                       <div className="task-details">
                                         <div className="task-progress" />
                                         <div className="search-progress2" />
                                       </div>
                                     </div>
                                     <div className="task-item">
-                                      <img className="icon" alt="" src="/icon.svg" />
+                                      <img className="icon" alt="" src={getAssetPath("/icon.svg")} />
                                       <div className="task-details">
                                         <div className="task-progress" />
                                         <div className="search-progress2" />
@@ -515,7 +516,7 @@ export default function DYNALANDINGPAGE() {
                 className="content-column2"
                 variants={scaleIn}
               >
-                <img className="content-block-icon" loading="lazy" alt="" src="/Content-Block@2x.png" />
+                <img className="content-block-icon" loading="lazy" alt="" src={getAssetPath("/Content-Block@2x.png")} />
                 <div className="content-block4">
                   <h3 className="text">Réunions hebdomaires avec Dyna</h3>
                   <h3 className="text2">Chaque semaine, ta manager 2.0 te fait un feedback sur ce qui s'est passé</h3>
@@ -530,7 +531,7 @@ export default function DYNALANDINGPAGE() {
                   <div className="content-block7">
                     <div className="true" />
                     <div className="shadow-parent">
-                      <img className="content-block-icon2" alt="" src="/Content-Block1@2x.png" />
+                      <img className="content-block-icon2" alt="" src={getAssetPath("/Content-Block1@2x.png")} />
                       <div className="content-block8">
                         <div className="content-block9"><Component1  />
                           <div className="content-block-text">
@@ -538,11 +539,11 @@ export default function DYNALANDINGPAGE() {
                               <div className="content-block-name">Casey</div>
                             </div>
                             <div className="stars-container">
-                              <img className="star-icon" alt="" src="/Star.svg" />
-                              <img className="star-icon" alt="" src="/Star.svg" />
-                              <img className="star-icon" alt="" src="/Star.svg" />
-                              <img className="star-icon" alt="" src="/Star.svg" />
-                              <img className="star-icon" alt="" src="/Star.svg" />
+                              <img className="star-icon" alt="" src={getAssetPath("/Star.svg")} />
+                              <img className="star-icon" alt="" src={getAssetPath("/Star.svg")} />
+                              <img className="star-icon" alt="" src={getAssetPath("/Star.svg")} />
+                              <img className="star-icon" alt="" src={getAssetPath("/Star.svg")} />
+                              <img className="star-icon" alt="" src={getAssetPath("/Star.svg")} />
                             </div>
                           </div>
                         </div>
@@ -550,13 +551,13 @@ export default function DYNALANDINGPAGE() {
                       </div>
                       <div className="true-parent">
                         <div className="true2" />
-                        <img className="svg-planet-icon" alt="" src="/svg-planet@2x.png" />
+                        <img className="svg-planet-icon" alt="" src={getAssetPath("/svg-planet@2x.png")} />
                         <div className="wrapper-content-block">
-                          <img className="content-block-icon3" alt="" src="/Content-Block2@2x.png" />
+                          <img className="content-block-icon3" alt="" src={getAssetPath("/Content-Block2@2x.png")} />
                         </div>
                         <div className="content-block10">
                           <div className="content-block-cursor-parent">
-                            <img className="content-block-cursor" loading="lazy" alt="" src="/Content-Block-Cursor.svg" />
+                            <img className="content-block-cursor" loading="lazy" alt="" src={getAssetPath("/Content-Block-Cursor.svg")} />
                             <div className="content-block11">
                               <div className="content-block-text2">DYNA</div>
                             </div>
@@ -633,35 +634,35 @@ export default function DYNALANDINGPAGE() {
               </div>
               <div className="container3">
                 <div className="feature-description">
-                  <img className="icon-container" loading="lazy" alt="" src="/Icon-Container.svg" />
+                  <img className="icon-container" loading="lazy" alt="" src={getAssetPath("/Icon-Container.svg")} />
                   <div className="feature-info">
                     <div className="feature-text">6 Business Dashboards</div>
                     <div className="feature-text2">{`Sales, Clients, Revenue, Margins, Activities & Insights`}</div>
                   </div>
                 </div>
                 <div className="feature-description">
-                  <img className="icon-container" alt="" src="/Icon-Container.svg" />
+                  <img className="icon-container" alt="" src={getAssetPath("/Icon-Container.svg")} />
                   <div className="feature-info">
                     <div className="feature-text">Unlimited AI Assistant</div>
                     <div className="feature-text2">24/7 access to your business co-pilot</div>
                   </div>
                 </div>
                 <div className="feature-description">
-                  <img className="icon-container" alt="" src="/Icon-Container.svg" />
+                  <img className="icon-container" alt="" src={getAssetPath("/Icon-Container.svg")} />
                   <div className="feature-info">
                     <div className="feature-text">Automated Follow-ups</div>
                     <div className="feature-text2">{`Smart sales & lead management`}</div>
                   </div>
                 </div>
                 <div className="feature-description">
-                  <img className="icon-container" alt="" src="/Icon-Container.svg" />
+                  <img className="icon-container" alt="" src={getAssetPath("/Icon-Container.svg")} />
                   <div className="feature-info">
                     <div className="feature-text">Weekly Reports</div>
                     <div className="feature-text2">Automated PDF reports via email</div>
                   </div>
                 </div>
                 <div className="feature-description">
-                  <img className="icon-container" alt="" src="/Icon-Container.svg" />
+                  <img className="icon-container" alt="" src={getAssetPath("/Icon-Container.svg")} />
                   <div className="feature-info">
                     <div className="feature-text">{`Challenges & Badges`}</div>
                     <div className="feature-text2">Gamification system unlocked</div>
@@ -672,10 +673,10 @@ export default function DYNALANDINGPAGE() {
                 <div className="partern" />
               </div>
               <div className="content">
-                <img className="popular-icon" alt="" src="/Popular-Icon.svg" />
+                <img className="popular-icon" alt="" src={getAssetPath("/Popular-Icon.svg")} />
                 <div className="popular-label">Most Popular</div>
               </div>
-              <img className="partern-icon" alt="" src="/Partern.svg" />
+              <img className="partern-icon" alt="" src={getAssetPath("/Partern.svg")} />
             </motion.div>
           </motion.section>
         </motion.section>
@@ -725,13 +726,13 @@ export default function DYNALANDINGPAGE() {
                     </motion.div>
                   </motion.div>
                   <motion.div className="avatar-add-button" variants={scaleIn}>
-                    <img className="content-icon" alt="" src="/Content.svg" />
+                    <img className="content-icon" alt="" src={getAssetPath("/Content.svg")} />
                   </motion.div>
                 </div>
                 <motion.div className="trustpilot-rating-container" variants={fadeInUp}>
                   <div className="trustpilot-rating-text">1000+ Reviews</div>
                   <div className="rating">
-                    <img className="star-icon" alt="" src="/Star.svg" />
+                    <img className="star-icon" alt="" src={getAssetPath("/Star.svg")} />
                     <div className="resources">4.8</div>
                   </div>
                 </motion.div>
@@ -890,50 +891,50 @@ export default function DYNALANDINGPAGE() {
         <div className="menu">
           <div className="inner">
             <div className="icon-placeholder">
-              <img className="elements-icon" alt="" src="/elements.svg" />
+              <img className="elements-icon" alt="" src={getAssetPath("/elements.svg")} />
             </div>
             <div className="home">Home</div>
             <div className="icon-placeholder">
-              <img className="elements-icon2" alt="" src="/elements1.svg" />
+              <img className="elements-icon2" alt="" src={getAssetPath("/elements1.svg")} />
             </div>
           </div>
           <div className="inner">
             <div className="icon-placeholder">
-              <img className="elements-icon" alt="" src="/elements2.svg" />
+              <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
             <div className="home">About us</div>
             <div className="icon-placeholder">
-              <img className="elements-icon2" alt="" src="/elements1.svg" />
+              <img className="elements-icon2" alt="" src={getAssetPath("/elements1.svg")} />
             </div>
           </div>
           <div className="inner">
             <div className="icon-placeholder">
-              <img className="elements-icon" alt="" src="/elements2.svg" />
+              <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
             <div className="home">Services</div>
             <div className="icon-placeholder">
-              <img className="elements-icon2" alt="" src="/elements1.svg" />
+              <img className="elements-icon2" alt="" src={getAssetPath("/elements1.svg")} />
             </div>
           </div>
           <div className="inner">
             <div className="icon-placeholder">
-              <img className="elements-icon" alt="" src="/elements2.svg" />
+              <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
             <div className="home">Projects</div>
             <div className="icon-placeholder">
-              <img className="elements-icon2" alt="" src="/elements1.svg" />
+              <img className="elements-icon2" alt="" src={getAssetPath("/elements1.svg")} />
             </div>
           </div>
           <div className="inner5">
             <div className="icon-placeholder4">
-              <img className="elements-icon" alt="" src="/elements2.svg" />
+              <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
             <div className="resources">Resources</div>
-            <img className="lucidechevron-down-icon" loading="lazy" alt="" src="/lucide-chevron-down.svg" />
+            <img className="lucidechevron-down-icon" loading="lazy" alt="" src={getAssetPath("/lucide-chevron-down.svg")} />
           </div>
           <div className="inner5">
             <div className="icon-placeholder4">
-              <img className="elements-icon" alt="" src="/elements2.svg" />
+              <img className="elements-icon" alt="" src={getAssetPath("/elements2.svg")} />
             </div>
             <div className="resources">Blog</div>
           </div>

@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import getAssetPath from '../utils/assetPath';
 import './TencentTDSQLC3DCN.css';
 
 export type TencentTDSQLC3DCNType = {
@@ -13,7 +14,7 @@ export type TencentTDSQLC3DCNType = {
 const TencentTDSQLC3DCN: FunctionComponent<TencentTDSQLC3DCNType> = ({ className="", property1="Default" }) => {
   return (
     <div className={`tencent-tdsql-c-3d-cn ${className}`} data-property1={property1}>
-      <img className="tencent-tdsql-c" loading="lazy" alt="" src="/Tencent-TDSQL-C@2x.png" />
+      <img className="tencent-tdsql-c" loading="lazy" alt="" src={getAssetPath("/Tencent-TDSQL-C@2x.png")} />
     </div>);
 };
 
