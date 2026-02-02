@@ -5,11 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   publicDir: 'public',
+  base: '/DYNA/', // Change this to your repository name
   server: {
     port: 3000,
     open: true
   },
   build: {
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    outDir: 'dist'
   }
 })

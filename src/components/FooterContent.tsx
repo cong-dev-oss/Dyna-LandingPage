@@ -1,11 +1,11 @@
-import { FunctionComponent, type CSSProperties } from 'react';
+import { FunctionComponent } from 'react';
 import Logo from "./Logo";
 import BgFoodter from "./BgFoodter";
 import './FooterContent.css';
 
 export type FooterContentType = {
   className?: string;
-  property1?: CSSProperties['property1'];
+  property1?: "Default" | "Variant2";
   union?: string;
   group?: string;
 }

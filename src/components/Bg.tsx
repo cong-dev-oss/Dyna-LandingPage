@@ -1,10 +1,10 @@
-import { FunctionComponent, type CSSProperties } from 'react';
+import { FunctionComponent } from 'react';
 import TencentTDSQLC3DCN from "./TencentTDSQLC3DCN";
 import './Bg.css';
 
 export type BgType = {
   className?: string;
-  property1?: CSSProperties['property1'];
+  property1?: string;
 }
 
 

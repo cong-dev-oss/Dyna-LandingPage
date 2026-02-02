@@ -1,11 +1,3 @@
-# Dependencies
-node_modules
-
-# Build output
-dist
-dist-ssr
-*.local
-
 # Logs
 logs
 *.log
@@ -15,12 +7,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Environment
-.env
-.env.local
-.env.*.local
+node_modules
+dist
+dist-ssr
+*.local
 
-# Editor
+# Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
@@ -31,16 +23,5 @@ lerna-debug.log*
 *.sln
 *.sw?
 
-# Testing / Coverage
-coverage
-*.lcov
-
-# OS
-Thumbs.db
-
-# Temporary / generated
-*.json.bak
-uipro-output.json
-extract_*.py
-check_*.py
-setup_*.py
+# Build output
+build

@@ -1,54 +1,61 @@
 # DYNA Landing Page
 
-Landing page React/TypeScript
+Landing page cho DYNA - Copilote IA cho freelancers.
 
-## Cấu trúc dự án
+## Công Nghệ
+
+- React + TypeScript
+- Vite
+- Framer Motion
+- CSS Modules
+
+## Development
+
+```bash
+# Cài đặt dependencies
+npm install
+
+# Chạy development server
+npm run dev
+
+# Build production
+npm run build
+
+# Preview build
+npm run preview
+```
+
+## Deploy lên GitHub Pages
+
+Xem file [DEPLOY.md](./DEPLOY.md) để biết hướng dẫn chi tiết.
+
+### Nhanh:
+
+1. Push code lên GitHub:
+```bash
+git add .
+git commit -m "Deploy setup"
+git push origin main
+```
+
+2. Vào **Settings** > **Pages** trên GitHub repository
+3. Chọn **Source**: GitHub Actions
+4. Website sẽ tự động deploy!
+
+URL: `https://<username>.github.io/DYNA/`
+
+## Cấu Trúc Dự Án
 
 ```
 DYNA/
-├── public/          # Ảnh, SVG, tài nguyên tĩnh
 ├── src/
-│   ├── components/   # Component React
-│   ├── pages/       # Trang landing + landing/motionVariants, landingData
-│   ├── global.css
-│   ├── chakra-theme.ts
-│   └── main.tsx
-├── index.html
-├── package.json
-├── tsconfig.json
-└── vite.config.ts
+│   ├── components/     # React components
+│   ├── pages/          # Page components
+│   └── main.tsx        # Entry point
+├── public/             # Static assets
+└── dist/              # Build output
 ```
 
-## Chạy dự án
+## License
 
-**Yêu cầu:** Node.js 16+, npm hoặc yarn.
-
-Cài đặt và chạy:
-
-```bash
-npm install
-npm run dev
-```
-
-Mở trình duyệt tại `http://localhost:3000`.
-
-Build production:
-
-```bash
-npm run build
-```
-
-Kết quả build nằm trong thư mục `dist/`.
-
-## Công nghệ
-
-- React 18, TypeScript
-- Vite (build và dev server)
-- Framer Motion (animation)
-- CSS
-
-## Ghi chú
-
-- Trang chính: `src/pages/DYNALANDINGPAGE.tsx`
-- Animation: `src/pages/landing/motionVariants.ts`
-- Dữ liệu landing: `src/pages/landing/landingData.ts`
+© Digital Unicorn. Tous droits réservés.
