@@ -26,7 +26,7 @@ git push origin main
 
 - Sau khi push code, GitHub Actions sẽ tự động chạy
 - Xem tiến trình tại tab **Actions** trên repository
-- Sau khi hoàn thành, website sẽ có tại: `https://<username>.github.io/DYNA/`
+- Sau khi hoàn thành, website sẽ có tại: `https://cong-dev-oss.github.io/Dyna-LandingPage/`
 
 ## Phương Pháp 2: Deploy Thủ Công
 
@@ -82,12 +82,12 @@ Nếu có lỗi khi build:
 Sau khi deploy thành công, website sẽ có URL:
 
 ```
-https://<github-username>.github.io/DYNA/
+https://<github-username>.github.io/Dyna-LandingPage/
 ```
 
-Ví dụ: Nếu username GitHub của bạn là `johndoe`, URL sẽ là:
+Với repository của bạn, URL sẽ là:
 ```
-https://johndoe.github.io/DYNA/
+https://cong-dev-oss.github.io/Dyna-LandingPage/
 ```
 
 ## Cập Nhật Website

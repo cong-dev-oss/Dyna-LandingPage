@@ -42,7 +42,7 @@ git push origin main
 3. Chọn **Source**: GitHub Actions
 4. Website sẽ tự động deploy!
 
-URL: `https://<username>.github.io/DYNA/`
+URL: `https://cong-dev-oss.github.io/Dyna-LandingPage/`
 
 ## Cấu Trúc Dự Án
 
