@@ -111,7 +111,7 @@ min-width: 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: var(--Global-Spacing-Sp-80) var(--Global-Spacing-Sp-64);
+padding: var(--Global-Spacing-Sp-64) var(--Global-Spacing-Sp-64);
 gap: var(--gap-64);
 text-align: center;
 font-size: var(--fs-64);
@@ -524,9 +524,9 @@ flex-shrink: 0;
 align-self: stretch;
 display: flex;
 align-items: center;
-padding: var(--Global-Spacing-Sp-80) var(--Global-Spacing-Sp-64);
+padding: var(--Global-Spacing-Sp-64) var(--Global-Spacing-Sp-64);
 box-sizing: border-box;
-gap: var(--Global-Spacing-Sp-80);
+gap: var(--Global-Spacing-Sp-64);
 max-width: 100%;
 }
 .text-and-list-container {
@@ -835,7 +835,7 @@ align-self: stretch;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: 350px var(--Global-Spacing-Sp-64) var(--Global-Spacing-Sp-80);
+padding: 350px var(--Global-Spacing-Sp-64) var(--Global-Spacing-Sp-64);
 box-sizing: border-box;
 position: relative;
 isolation: isolate;
@@ -1664,7 +1664,7 @@ align-self: stretch;
 display: flex;
 flex-direction: column;
 align-items: center;
-padding: var(--Global-Spacing-Sp-80) var(--Global-Spacing-Sp-64);
+padding: var(--Global-Spacing-Sp-64) var(--Global-Spacing-Sp-64);
 gap: var(--spacing-7xl);
 }
 .text-block4 {
@@ -1911,7 +1911,7 @@ align-self: stretch;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: var(--Global-Spacing-Sp-80) var(--Global-Spacing-Sp-64);
+padding: var(--Global-Spacing-Sp-64) var(--Global-Spacing-Sp-64);
 box-sizing: border-box;
 max-width: 100%;
 min-width: 0;
