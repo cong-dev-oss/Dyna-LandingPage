@@ -55,12 +55,12 @@ const ContentBlock: FunctionComponent<ContentBlockType> = ({
           <p className="content-block-review">{review}</p>
         </div>
         
-        {/* Decorative merged asset background */}
-        <img 
+        {/* Decorative merged asset background - removed as file doesn't exist */}
+        {/* <img 
           className="merged-asset-1-icon" 
           alt="Decorative background" 
-          src={getAssetPath("/merged-asset-1@2x.png")} 
-        />
+          src={getAssetPath("/Content-Block@2x.png")} 
+        /> */}
         
         {/* DYNA branding badge */}
         <div className="content-block6">
