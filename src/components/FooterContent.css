@@ -6,7 +6,7 @@ overflow: hidden;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: var(--Golbal-color-Golbal-Spacing-Sp-80) var(--padding-80) var(--Golbal-color-Golbal-Spacing-Sp-32);
+padding: var(--Golbal-color-Golbal-Spacing-Sp-80) var(--padding-64) var(--Golbal-color-Golbal-Spacing-Sp-32);
 box-sizing: border-box;
 position: relative;
 isolation: isolate;
