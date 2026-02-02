@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react';
+import getAssetPath from '../utils/assetPath';
 import './Logo.css';
 
 export type LogoType = {
@@ -15,8 +16,8 @@ export type LogoType = {
 const Logo: FunctionComponent<LogoType> = ({ className="", property1="Default", union, group }) => {
   return (
     <div className={`root4 ${className}`} data-property1={property1}>
-      <img className="union-icon" alt="" src={union} />
-      <img className="group-icon" alt="" src={group} />
+      <img className="union-icon" alt="" src={union ? getAssetPath(union) : ''} />
+      <img className="group-icon" alt="" src={group ? getAssetPath(group) : ''} />
     </div>);
 };
 
